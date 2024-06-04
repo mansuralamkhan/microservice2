@@ -19,7 +19,7 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM',
                           branches: [[name: '*/master']],
-                          userRemoteConfigs: [[url: 'https://github.com/mansuralamkhan/microservice.git']],
+                          userRemoteConfigs: [[url: 'https://github.com/mansuralamkhan/microservice2.git']],
                           doGenerateSubmoduleConfigurations: false,
                           submoduleCfg: [],
                           extensions: [[$class: 'SubmoduleOption', recursiveSubmodules: true]]
