@@ -78,11 +78,11 @@ pipeline {
         always {
             script {
                 sh "docker rmi ${USER_SERVICE_REPO}:${params.VERSION}"
-                sh "docker rmi ${USER_SERVICE_REPO}:latest"
+                // sh "docker rmi ${USER_SERVICE_REPO}:latest"
                 sh "docker rmi ${PRODUCT_SERVICE_REPO}:${params.VERSION}"
-                sh "docker rmi ${PRODUCT_SERVICE_REPO}:latest"
+                // sh "docker rmi ${PRODUCT_SERVICE_REPO}:latest"
                 sh "docker rmi ${ORDER_SERVICE_REPO}:${params.VERSION}"
-                sh "docker rmi ${ORDER_SERVICE_REPO}:latest"
+                // sh "docker rmi ${ORDER_SERVICE_REPO}:latest"
             }
         }
     }
