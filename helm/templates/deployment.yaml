@@ -12,6 +12,8 @@ spec:
       labels:
         app: user-service
     spec:
+      imagePullSecrets:
+        - name: ecr-registry-secret1
       containers:
       - name: user-service
         image: {{ .Values.userService.image.repository }}:{{ .Values.userService.image.tag }}
@@ -32,6 +34,8 @@ spec:
       labels:
         app: product-service
     spec:
+      imagePullSecrets:
+        - name: ecr-registry-secret
       containers:
       - name: product-service
         image: {{ .Values.productService.image.repository }}:{{ .Values.productService.image.tag }}
@@ -52,6 +56,8 @@ spec:
       labels:
         app: order-service
     spec:
+      imagePullSecrets:
+        - name: ecr-registry-secret
       containers:
       - name: order-service
         image: {{ .Values.orderService.image.repository }}:{{ .Values.orderService.image.tag }}
