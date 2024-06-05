@@ -16,7 +16,7 @@ spec:
         - name: ecr-registry-secret1
       containers:
       - name: user-service
-        image: {{ .Values.userService.image.repository }}:{{ .Values.userService.image.tag }}
+        image: {{ .Values.userService.image.repository }}:{{ .Values.global.imageTag }}
         ports:
         - containerPort: {{ .Values.userService.port }}
 ---
@@ -38,7 +38,7 @@ spec:
         - name: ecr-registry-secret
       containers:
       - name: product-service
-        image: {{ .Values.productService.image.repository }}:{{ .Values.productService.image.tag }}
+        image: {{ .Values.productService.image.repository }}:{{ .Values.global.imageTag }}
         ports:
         - containerPort: {{ .Values.productService.port }}
 ---
@@ -60,6 +60,6 @@ spec:
         - name: ecr-registry-secret
       containers:
       - name: order-service
-        image: {{ .Values.orderService.image.repository }}:{{ .Values.orderService.image.tag }}
+        image: {{ .Values.orderService.image.repository }}:{{ .Values.global.imageTag }}
         ports:
         - containerPort: {{ .Values.orderService.port }}
