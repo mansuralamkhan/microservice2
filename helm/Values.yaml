@@ -1,19 +1,23 @@
-image:
-  repository: 183991395055.dkr.ecr.us-east-1.amazonaws.com
-  tag: "latest"
+global:
+  imageTag: "latest"
 
 userService:
-  image: "{{ .Values.image.repository }}/user_service:{{ .Values.image.tag }}"
+  image:
+    repository: 183991395055.dkr.ecr.us-east-1.amazonaws.com/user-service
+    tag: "{{ .Values.global.imageTag }}"
   replicas: 2
   port: 3001
 
 productService:
-  image: "{{ .Values.image.repository }}/product_service:{{ .Values.image.tag }}"
+  image:
+    repository: 183991395055.dkr.ecr.us-east-1.amazonaws.com/product-service
+    tag: "{{ .Values.global.imageTag }}"
   replicas: 2
   port: 3002
 
 orderService:
-  image: "{{ .Values.image.repository }}/order_service:{{ .Values.image.tag }}"
+  image:
+    repository: 183991395055.dkr.ecr.us-east-1.amazonaws.com/order-service
+    tag: "{{ .Values.global.imageTag }}"
   replicas: 2
   port: 3003
-

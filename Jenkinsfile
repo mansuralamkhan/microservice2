@@ -63,7 +63,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    sh "helm upgrade --install microservices ./helm --set image.tag=${params.VERSION}"
+                     sh "helm upgrade --install microservices ./helm --set global.imageTag=${params.VERSION}"
                 }
             }
         }
