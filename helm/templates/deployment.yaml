@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}-{{ .Release.Name }}
+  name: {{ .Chart.Name }}-{{ .Release.Name }}-1
 spec:
   replicas: {{ .Values.userService.replicas }}
   selector:
@@ -23,7 +23,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}-{{ .Release.Name }}
+  name: {{ .Chart.Name }}-{{ .Release.Name }}-2
 spec:
   replicas: {{ .Values.productService.replicas }}
   selector:
@@ -45,7 +45,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}-{{ .Release.Name }}
+  name: {{ .Chart.Name }}-{{ .Release.Name }}-3
 spec:
   replicas: {{ .Values.orderService.replicas }}
   selector:
