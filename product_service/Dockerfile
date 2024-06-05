@@ -37,7 +37,7 @@ WORKDIR /usr/src/app
 COPY --from=build /usr/src/app .
 
 # Expose the port that the app runs on
-EXPOSE 3001
+EXPOSE 3002
 
 # Define the command to run the application
 CMD ["node", "app.js"]
