@@ -17,4 +17,3 @@ orderService:
   replicas: 2
   port: 3003
 
---
